@@ -1,0 +1,325 @@
+\hypertarget{action_8h}{}\doxysection{action.\+h File Reference}
+\label{action_8h}\index{action.h@{action.h}}
+
+
+header pour la structure S\+DD action  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for action.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{action_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{action_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaction}{action}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}}~\mbox{\hyperlink{structaction__t}{action\+\_\+t}} $\ast$
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{action_8h_ab43a9e16069daeb43bb0e7798416c753}\label{action_8h_ab43a9e16069daeb43bb0e7798416c753}} 
+typedef struct \mbox{\hyperlink{structaction}{action}} {\bfseries action\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}} \mbox{\hyperlink{action_8h_a1d364353dc52934b44e63307742503f2}{init\+List\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Fonction créant une nouvelle instance d\textquotesingle{}une liste d\textquotesingle{}action. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structaction__t}{action\+\_\+t}} $\ast$ \mbox{\hyperlink{action_8h_a32be373d585734305c8dbc8fdbcbbd46}{new\+Action}} (char jour, char heure\mbox{[}2\mbox{]}, char nom\mbox{[}10\mbox{]})
+\item 
+void \mbox{\hyperlink{action_8h_ac2825f46713e1906a39a74ba670f5f99}{free\+Action}} (\mbox{\hyperlink{structaction__t}{action\+\_\+t}} $\ast$act)
+\begin{DoxyCompactList}\small\item\em libère l\textquotesingle{}action (simple free) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{action_8h_a55b95f0c54c42464a526ee77e52d4cdb}{free\+List\+Action}} (\mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}} list\+Act)
+\begin{DoxyCompactList}\small\item\em libère la liste fournit en paramètre \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{action_8h_ab1f31d63a05b0a06bef14650689b0699}{insert\+Action}} (\mbox{\hyperlink{structaction__t}{action\+\_\+t}} $\ast$nouv\+Action, \mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}} $\ast$la)
+\begin{DoxyCompactList}\small\item\em insert l\textquotesingle{}action nouv\+Action dans la liste list\+Act en respectant l\textquotesingle{}ordre \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structaction__t}{action\+\_\+t}} $\ast$$\ast$ \mbox{\hyperlink{action_8h_abca57311f57bb50202ffcff3fe5c3796}{find\+Action}} (char heure\mbox{[}2\mbox{]}, char jour, \mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}} $\ast$la)
+\begin{DoxyCompactList}\small\item\em recherche l\textquotesingle{}adresse de l\textquotesingle{}action avec l\textquotesingle{}heure et le jour donnait en arguement \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{action_8h_a0fb7719ea05c330ff41ca9eb76156e93}{supr\+Action}} (\mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}} $\ast$la, char heure\mbox{[}2\mbox{]}, char jour)
+\begin{DoxyCompactList}\small\item\em supprime l\textquotesingle{}action du jour et heure indiqué dans la liste list\+Act \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{action_8h_a433ff5371b98f1de67985c2fa13a2842}{compare\+Action}} (\mbox{\hyperlink{structaction__t}{action\+\_\+t}} $\ast$a, char heure\mbox{[}2\mbox{]}, char jour)
+\begin{DoxyCompactList}\small\item\em retourne 1 si l\textquotesingle{}action est plus tard ou égale à l\textquotesingle{}heure et le jour donné en argument \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{action_8h_a860d21017a45c41e5eabac30152a0245}{equal\+Action}} (\mbox{\hyperlink{structaction__t}{action\+\_\+t}} $\ast$a, char heure\mbox{[}2\mbox{]}, char jour)
+\begin{DoxyCompactList}\small\item\em retourne 1 si l\textquotesingle{}action est égale à l\textquotesingle{}heure et le jour donné en argument \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{action_8h_a0db12badeb0ea49741c137f948530e0e}{check\+Day}} (char jour)
+\begin{DoxyCompactList}\small\item\em Vérifie si le jour est cohérent. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{action_8h_a22f51b1c6329882876b05addfba2ac9a}{check\+Hour}} (char heure\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Vérifie si l\textquotesingle{}heure est cohérent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{action_8h_a8879acae22729902c036c9bf175ecd91}{pretty\+Print\+List\+Action}} (\mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}} list\+Act)
+\begin{DoxyCompactList}\small\item\em Affichage de la liste d\textquotesingle{}action de façon plus lisible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+header pour la structure S\+DD action 
+
+\begin{DoxyAuthor}{Author}
+Marie Bornet et Cliquot Théo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15 février 2022
+\end{DoxyDate}
+Header contenant toute les fonctions de bases pour la structure action (Init, new, find, insert, supr ...) 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}\label{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}} 
+\index{action.h@{action.h}!listAction\_t@{listAction\_t}}
+\index{listAction\_t@{listAction\_t}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{listAction\_t}{listAction\_t}}
+{\footnotesize\ttfamily \#define list\+Action\+\_\+t~\mbox{\hyperlink{structaction__t}{action\+\_\+t}} $\ast$}
+
+Simplification, une liste d\textquotesingle{}action est en réalité un pointeur vers l\textquotesingle{}action qui correspond à la tête de liste 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{action_8h_a0db12badeb0ea49741c137f948530e0e}\label{action_8h_a0db12badeb0ea49741c137f948530e0e}} 
+\index{action.h@{action.h}!checkDay@{checkDay}}
+\index{checkDay@{checkDay}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{checkDay()}{checkDay()}}
+{\footnotesize\ttfamily int check\+Day (\begin{DoxyParamCaption}\item[{char}]{jour }\end{DoxyParamCaption})}
+
+
+
+Vérifie si le jour est cohérent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jour} & \+: le jour à vérifié \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si cohérent, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_a22f51b1c6329882876b05addfba2ac9a}\label{action_8h_a22f51b1c6329882876b05addfba2ac9a}} 
+\index{action.h@{action.h}!checkHour@{checkHour}}
+\index{checkHour@{checkHour}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{checkHour()}{checkHour()}}
+{\footnotesize\ttfamily int check\+Hour (\begin{DoxyParamCaption}\item[{char}]{heure\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Vérifie si l\textquotesingle{}heure est cohérent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jour} & \+: l\textquotesingle{}heure à vérifié \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si cohérent, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_a433ff5371b98f1de67985c2fa13a2842}\label{action_8h_a433ff5371b98f1de67985c2fa13a2842}} 
+\index{action.h@{action.h}!compareAction@{compareAction}}
+\index{compareAction@{compareAction}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{compareAction()}{compareAction()}}
+{\footnotesize\ttfamily int compare\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaction__t}{action\+\_\+t}} $\ast$}]{a,  }\item[{char}]{heure\mbox{[}2\mbox{]},  }\item[{char}]{jour }\end{DoxyParamCaption})}
+
+
+
+retourne 1 si l\textquotesingle{}action est plus tard ou égale à l\textquotesingle{}heure et le jour donné en argument 
+
+
+\begin{DoxyParams}{Parameters}
+{\em act} & \+: action à comparer \\
+\hline
+{\em heure} & \+: heure de référence \\
+\hline
+{\em jour} & \+: jour de référence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si act $>$=, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_a860d21017a45c41e5eabac30152a0245}\label{action_8h_a860d21017a45c41e5eabac30152a0245}} 
+\index{action.h@{action.h}!equalAction@{equalAction}}
+\index{equalAction@{equalAction}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{equalAction()}{equalAction()}}
+{\footnotesize\ttfamily int equal\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaction__t}{action\+\_\+t}} $\ast$}]{a,  }\item[{char}]{heure\mbox{[}2\mbox{]},  }\item[{char}]{jour }\end{DoxyParamCaption})}
+
+
+
+retourne 1 si l\textquotesingle{}action est égale à l\textquotesingle{}heure et le jour donné en argument 
+
+
+\begin{DoxyParams}{Parameters}
+{\em act} & \+: action à comparer \\
+\hline
+{\em heure} & \+: heure de référence \\
+\hline
+{\em jour} & \+: jour de référence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si act $>$=, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_abca57311f57bb50202ffcff3fe5c3796}\label{action_8h_abca57311f57bb50202ffcff3fe5c3796}} 
+\index{action.h@{action.h}!findAction@{findAction}}
+\index{findAction@{findAction}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{findAction()}{findAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaction__t}{action\+\_\+t}}$\ast$$\ast$ find\+Action (\begin{DoxyParamCaption}\item[{char}]{heure\mbox{[}2\mbox{]},  }\item[{char}]{jour,  }\item[{\mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}} $\ast$}]{la }\end{DoxyParamCaption})}
+
+
+
+recherche l\textquotesingle{}adresse de l\textquotesingle{}action avec l\textquotesingle{}heure et le jour donnait en arguement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heure} & \+: l\textquotesingle{}heure (00 à 24), \\
+\hline
+{\em jour} & \+: le jour (1 à 7), \\
+\hline
+{\em list\+Act} & \+: la liste où il faut chercher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de pointeur vers la cellule précédent celle recherché où la première plus grande, N\+Ull si heure et jour ne sont pas correcte 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_ac2825f46713e1906a39a74ba670f5f99}\label{action_8h_ac2825f46713e1906a39a74ba670f5f99}} 
+\index{action.h@{action.h}!freeAction@{freeAction}}
+\index{freeAction@{freeAction}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{freeAction()}{freeAction()}}
+{\footnotesize\ttfamily void free\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaction__t}{action\+\_\+t}} $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+libère l\textquotesingle{}action (simple free) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em act} & \+: action à free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_a55b95f0c54c42464a526ee77e52d4cdb}\label{action_8h_a55b95f0c54c42464a526ee77e52d4cdb}} 
+\index{action.h@{action.h}!freeListAction@{freeListAction}}
+\index{freeListAction@{freeListAction}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{freeListAction()}{freeListAction()}}
+{\footnotesize\ttfamily void free\+List\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}}}]{a }\end{DoxyParamCaption})}
+
+
+
+libère la liste fournit en paramètre 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list\+Act} & \+: la liste a libéré \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_a1d364353dc52934b44e63307742503f2}\label{action_8h_a1d364353dc52934b44e63307742503f2}} 
+\index{action.h@{action.h}!initListAction@{initListAction}}
+\index{initListAction@{initListAction}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{initListAction()}{initListAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}} init\+List\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction créant une nouvelle instance d\textquotesingle{}une liste d\textquotesingle{}action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Null (liste d\textquotesingle{}action vide) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_ab1f31d63a05b0a06bef14650689b0699}\label{action_8h_ab1f31d63a05b0a06bef14650689b0699}} 
+\index{action.h@{action.h}!insertAction@{insertAction}}
+\index{insertAction@{insertAction}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{insertAction()}{insertAction()}}
+{\footnotesize\ttfamily void insert\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaction__t}{action\+\_\+t}} $\ast$}]{nouv\+Action,  }\item[{\mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}} $\ast$}]{la }\end{DoxyParamCaption})}
+
+
+
+insert l\textquotesingle{}action nouv\+Action dans la liste list\+Act en respectant l\textquotesingle{}ordre 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nouv\+Action} & \+: l\textquotesingle{}action à insérer \\
+\hline
+{\em list\+Act} & \+: la liste où il faut insérer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_a32be373d585734305c8dbc8fdbcbbd46}\label{action_8h_a32be373d585734305c8dbc8fdbcbbd46}} 
+\index{action.h@{action.h}!newAction@{newAction}}
+\index{newAction@{newAction}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{newAction()}{newAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaction__t}{action\+\_\+t}}$\ast$ new\+Action (\begin{DoxyParamCaption}\item[{char}]{jour,  }\item[{char}]{heure\mbox{[}2\mbox{]},  }\item[{char}]{nom\mbox{[}10\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em jour} & \+: jour de l\textquotesingle{}action, \\
+\hline
+{\em heure} & \+: heure de l\textquotesingle{}action, \\
+\hline
+{\em nom} & \+: nom de l\textquotesingle{}action \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+l\textquotesingle{}action remplie avec les arguments donnée 
+\end{DoxyReturn}
+\mbox{\Hypertarget{action_8h_a8879acae22729902c036c9bf175ecd91}\label{action_8h_a8879acae22729902c036c9bf175ecd91}} 
+\index{action.h@{action.h}!prettyPrintListAction@{prettyPrintListAction}}
+\index{prettyPrintListAction@{prettyPrintListAction}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{prettyPrintListAction()}{prettyPrintListAction()}}
+{\footnotesize\ttfamily void pretty\+Print\+List\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}}}]{list\+Act }\end{DoxyParamCaption})}
+
+
+
+Affichage de la liste d\textquotesingle{}action de façon plus lisible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list\+Act} & \+: la liste à afficher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+E\+F\+F\+ET DE B\+O\+RD \+::\+: Print la liste \mbox{\Hypertarget{action_8h_a0fb7719ea05c330ff41ca9eb76156e93}\label{action_8h_a0fb7719ea05c330ff41ca9eb76156e93}} 
+\index{action.h@{action.h}!suprAction@{suprAction}}
+\index{suprAction@{suprAction}!action.h@{action.h}}
+\doxysubsubsection{\texorpdfstring{suprAction()}{suprAction()}}
+{\footnotesize\ttfamily void supr\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{action_8h_af4fa8140664e76c76ec2bd8f362ad7e3}{list\+Action\+\_\+t}} $\ast$}]{la,  }\item[{char}]{heure\mbox{[}2\mbox{]},  }\item[{char}]{jour }\end{DoxyParamCaption})}
+
+
+
+supprime l\textquotesingle{}action du jour et heure indiqué dans la liste list\+Act 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jour} & \+: le jour de l\textquotesingle{}action à supprimer (0 à 7) \\
+\hline
+{\em heure} & \+: l\textquotesingle{}heure de l\textquotesingle{}action à supprimer (0 à 24) \\
+\hline
+{\em list\+Act} & \+: la liste d\textquotesingle{}action ou il faut supprimer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Si l\textquotesingle{}action n\textquotesingle{}est pas contenu dans la liste, la fonction ne fera rien dans ce cas 

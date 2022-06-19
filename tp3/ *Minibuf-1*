@@ -1,0 +1,10 @@
+159  Swiper: 
+     if (!isEmptyPile(pile)){
+       cours = depiler(pile, p);
+       cours = (cours->filsD);
+     }
+     else {
+       fin = 1;
+     }
+   }
+   

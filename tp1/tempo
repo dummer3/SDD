@@ -1,0 +1,192 @@
+#include "liste.h"
+
+listSemaine_t initListSemaine() {
+  listSemaine_t s = (listSemaine_t)malloc(sizeof(semaine_t));
+  if (!s) {
+    printf("ERROR INIT WEEK\n");
+    exit(-1);
+  }
+  s->suiv = NULL;
+  return s;
+}
+
+semaine_t *newSemaine(char annee[4], char numSemaine[2]) {
+  semaine_t *s = (semaine_t *)malloc(sizeof(semaine_t));
+  strcpy(s->annee, annee);
+  strcpy(s->numSemaine, numSemaine);
+  s->suiv = NULL;
+  s->listeAction = initListAction();
+  return s;
+}
+
+listAction_t initListAction() {
+  listAction_t a = (listAction_t)malloc(sizeof(action_t));
+  a->suiv = NULL;
+  return a;
+}
+
+action_t *newAction(char jour, char heure[2], char nom[10]) {
+  action_t *a = (action_t *)malloc(sizeof(action_t));
+  a->jour = jour;
+  strcpy(a->heure, heure);
+  strcpy(a->nom, nom);
+  a->suiv = NULL;
+  return a;
+}
+
+void freeSemaine(semaine_t *s) {
+  freeListAction(s->listeAction);
+  free(s);
+}
+
+void freeAction(action_t *a) { free(a); }
+
+void freeListSemaine(listSemaine_t s) {
+  semaine_t *curr = s->suiv;
+  semaine_t *tmp;
+  while (curr) {
+    tmp = curr;
+    curr = curr->suiv;
+    freeSemaine(tmp);
+  }
+  free(s);
+}
+
+void freeListAction(listAction_t a) {
+  action_t *curr = a->suiv;
+  action_t *tmp;
+  while (curr) {
+    tmp = curr;
+    curr = curr->suiv;
+    freeAction(tmp);
+  }
+  free(a);
+}
+
+int compareAction(action_t *a, char heure[2], char jour) {
+  return a->jour < jour || (a->jour == jour && strcmp(a->heure, heure) < 0);
+}
+int compareSemaine(semaine_t *a, char annee[4], char numSemaine[2]) {
+  return strcmp(a->annee, annee) < 0 ||
+         (strcmp(a->annee, annee) == 0 &&
+          (strcmp(a->numSemaine, numSemaine) < 0));
+}
+int equalAction(action_t *a, char heure[2], char jour) {
+  return a->jour == jour && strcmp(a->heure, heure) == 0;
+}
+int equalSemaine(semaine_t *a, char annee[4], char numSemaine[2]) {
+  return strcmp(a->annee, annee) == 0 && strcmp(a->numSemaine, numSemaine) == 0;
+}
+action_t *findAction(char heure[2], char jour, listAction_t la) {
+  action_t *curr = NULL;
+  if (la->suiv && compareAction(la->suiv, heure, jour)) {
+    curr = la->suiv;
+    while (curr->suiv != NULL && compareAction(curr->suiv, heure, jour)) {
+      curr = curr->suiv;
+    }
+  }
+  return curr;
+}
+
+semaine_t *findSemaine(char annee[4], char numSemaine[2], listSemaine_t ls) {
+  semaine_t *curr = NULL;
+  if (ls->suiv && compareSemaine(ls->suiv, annee, numSemaine)) {
+    curr = ls->suiv;
+    while (curr->suiv && compareSemaine(curr->suiv, annee, numSemaine)) {
+      curr = curr->suiv;
+    }
+  }
+  return curr;
+}
+
+void insertAction(action_t *nouvAction, listAction_t la) {
+  action_t *curr = findAction(nouvAction->heure, nouvAction->jour, la);
+  if (curr) {
+    if (curr->suiv != NULL &&
+        equalAction(curr->suiv, nouvAction->heure, nouvAction->jour)) {
+      printf("WE HAVE ALREADY AN ACTION AT THIS HOUR AND DAY OF THE WEEK\n");
+      freeAction(nouvAction);
+    } else {
+      action_t *tmp = curr->suiv;
+      curr->suiv = nouvAction;
+      nouvAction->suiv = tmp;
+    }
+  } else {
+    if (la->suiv != NULL &&
+        equalAction(la->suiv, nouvAction->heure, nouvAction->jour)) {
+      printf("WE HAVE ALREADY AN ACTION AT THIS HOUR AND DAY OF THE WEEK\n");
+      freeAction(nouvAction);
+    } else {
+      nouvAction->suiv = la->suiv;
+      la->suiv = nouvAction;
+    }
+  }
+}
+
+void insertSemaine(semaine_t *nouvSemaine, listSemaine_t ls) {
+  semaine_t *curr =
+      findSemaine(nouvSemaine->annee, nouvSemaine->numSemaine, ls);
+  if (curr && curr->suiv) {
+    if (curr->suiv &&
+        equalSemaine(curr->suiv, nouvSemaine->annee, nouvSemaine->numSemaine)) {
+      printf("THIS WEEK ALREADY EXIST, NO NEED TO ADD IT\n");
+      freeSemaine(nouvSemaine);
+    } else {
+      semaine_t *tmp = curr->suiv;
+      curr->suiv = nouvSemaine;
+      nouvSemaine->suiv = tmp;
+    }
+  } else {
+    if (ls->suiv != NULL &&
+        equalSemaine(ls->suiv, nouvSemaine->annee, nouvSemaine->numSemaine)) {
+      printf("THIS WEEK ALREADY EXIST, NO NEED TO ADD IT\n");
+      freeSemaine(nouvSemaine);
+    } else {
+      nouvSemaine->suiv = ls->suiv;
+      ls->suiv = nouvSemaine;
+    }
+  }
+}
+
+void suprActionDansSemaine(listSemaine_t ls, char annee[4], char semaine[2],
+                           char jour, char heure[2]) {
+  semaine_t *precSemaine = findSemaine(annee, semaine, ls);
+  if (precSemaine != NULL && compareSemaine(precSemaine, annee, semaine)) {
+    action_t *curr =
+        findAction(heure, jour, findSemaine(annee, semaine, ls)->listeAction);
+    if (curr != NULL && compareAction(curr, heure, jour)) {
+      action_t *tmp = curr->suiv;
+      curr->suiv = curr->suiv->suiv;
+      free(tmp);
+    } else {
+      printf("ERROR NO ACTION WITH THIS DAY OR HOUR FOUND\n");
+      exit(-1);
+    }
+  } else {
+    printf("ERROR NO WEEK WITH THIS YEAR OR WEEK NUMBER FOUND\n");
+    exit(-1);
+  }
+}
+
+void prettyPrintListAction(listAction_t listAct) {
+  if (listAct->suiv) {
+    action_t *curr = listAct->suiv;
+    int i = 0;
+    while (curr) {
+      printf("| %d | %c | %s | %s |\n", i, curr->jour, curr->heure, curr->nom);
+      i++;
+      curr = curr->suiv;
+    }
+  }
+}
+void prettyPrintListSemaine(listSemaine_t listSemaine) {
+  if (listSemaine->suiv) {
+    semaine_t *curr = listSemaine->suiv;
+    int i = 0;
+    while (curr) {
+      printf("| %d | %s | %s |\n", i, curr->numSemaine, curr->annee);
+      i++;
+      curr = curr->suiv;
+    }
+  }
+}
