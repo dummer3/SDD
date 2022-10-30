@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-06-20 lun. 10:18 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Compte Rendu SDD calendrier</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Cliquot Théo &amp; Marie Bornet" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Compte Rendu SDD calendrier</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge8057c7">1. Présentation générale</a>
+<ul>
+<li><a href="#orgccc2c57">1.1. Objet du TP</a></li>
+<li><a href="#org9f50610">1.2. Les structures de données</a>
+<ul>
+<li><a href="#org34d024c">1.2.1. Action</a></li>
+<li><a href="#orgd76492f">1.2.2. Semaine</a></li>
+</ul>
+</li>
+<li><a href="#org4087c5a">1.3. Les fichiers de données</a></li>
+<li><a href="#org1010fed">1.4. Organisation du code source</a>
+<ul>
+<li><a href="#org75aa037">1.4.1. Action.c</a></li>
+<li><a href="#org00f1b9e">1.4.2. semaine.c</a></li>
+<li><a href="#orgd0bc490">1.4.3. menu.c</a></li>
+<li><a href="#org6b93782">1.4.4. test.c</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org37ef291">2. Fonctions</a>
+<ul>
+<li><a href="#org5e1b509">2.1. Fonctions actions</a>
+<ul>
+<li><a href="#org5853d31">2.1.1. Sous procédures</a></li>
+<li><a href="#org750b61e">2.1.2. Procédures</a></li>
+</ul>
+</li>
+<li><a href="#org3b09a5f">2.2. Fonctions semaines</a>
+<ul>
+<li><a href="#orgb602ebb">2.2.1. Sous procédures</a></li>
+<li><a href="#org350c06a">2.2.2. Procedures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org6613b4e">3. Exécution</a>
+<ul>
+<li><a href="#org3d4ccbe">3.1. Makefile</a></li>
+<li><a href="#org6923587">3.2. Jeux de tests</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge8057c7" class="outline-2">
+<h2 id="orge8057c7"><span class="section-number-2">1.</span> Présentation générale</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgccc2c57" class="outline-3">
+<h3 id="orgccc2c57"><span class="section-number-3">1.1.</span> Objet du TP</h3>
+<div class="outline-text-3" id="text-1-1">
+<blockquote>
+<p>
+On gère un échéancier (ou un agenda) grâce à une liste chaînée à deux niveaux.
+</p>
+</blockquote>
+
+<p>
+Le but de ce TP est de concevoir un emploi du temps consistant en des semaines
+et chaque semaine pouvant contenir plusieurs actions. On doit pouvoir réaliser
+des actions basiques avec ce calendrier, notamment afficher, ajouter ou
+supprimer des actions, charger ou sauvegarder une calendrier depuis un fichier
+&#x2026;
+Pour cela On va se servir d'un structure de données déjà vu en cours : la
+liste chaînée.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org9f50610" class="outline-3">
+<h3 id="org9f50610"><span class="section-number-3">1.2.</span> Les structures de données</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org34d024c" class="outline-4">
+<h4 id="org34d024c"><span class="section-number-4">1.2.1.</span> Action</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+L'action est caractérisée par un jour de la semaine et une heure, on donne à
+chaque action un nom permettant de l'identifier facilement en moins de 10
+caractères.
+</p>
+
+
+<p>
+Dans le cadre d'un calendrier, pouvoir contrôler qu'une seule action ne nous
+intéresse pas. C'est pour cela qu'on va préférer gérer une liste d'action,
+il va donc nous falloir en plus des infos propres à chaque action un nouveau
+champ que l'on va nommer suivant qui va nous indiquer si il y a une autre
+action de prévu après celle en cours.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #6E8EE5;">typedef</span> <span style="color: #6E8EE5;">struct</span> <span style="color: #7392E5;">action</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">day</span>;            <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Jour de la semaine (de 1 a 7)</span>
+  <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">hour</span><span style="color: #93a8c6;">[</span>3<span style="color: #93a8c6;">]</span>;        <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Heure (de 00 a 24)</span>
+  <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">name</span><span style="color: #93a8c6;">[</span>10<span style="color: #93a8c6;">]</span>;       <span style="color: #656C7D;">// </span><span style="color: #656C7D;">nom de l'action</span>
+  <span style="color: #6E8EE5;">struct</span> <span style="color: #7392E5;">action</span> *<span style="color: #CBD4EA;">suiv</span>; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">action suivante</span>
+<span style="color: #8c8c8c;">}</span> <span style="color: #7392E5;">action_t</span>;
+</pre>
+</div>
+
+<p>
+En ce qui concerne la liste d'action, on va utiliser une tête réel qui pointera
+vers la tête de notre liste. Ainsi une liste d'action n'est pas à proprement
+parlé une structure, cependant on va utiliser un define pour la créer.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #b0c4de;">#define</span> <span style="color: #CBD4EA;">listAction_t</span> action_t *
+</pre>
+</div>
+
+<p>
+Une seule action peut avoir le même jour et la même heure dans la même liste (On ne
+peut avoir 2 cours sur le même crenau et le même jour par exemple)
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgd76492f" class="outline-4">
+<h4 id="orgd76492f"><span class="section-number-4">1.2.2.</span> Semaine</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+La semaine se rapproche très fortement dans sa construction avec la
+structure action. En effet On va gérer une semaine de la même façon que l'on
+gère une action, c'est à dire qu'une semaine sera une cellule ce qui nous
+permettra de créer une liste de semaine. Une semaine sera aussi unique dans
+une liste en fonction de son année et de son numéro.
+</p>
+
+<p>
+Une semaine est constitué comme dit précédemment d'une année, d'un numéro de
+semaine mais aussi d'un pointeur vers la semaine qui suit celle en cours et
+d'une liste d'action, représentant les actions à faire pour cette semaine.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #6E8EE5;">typedef</span> <span style="color: #6E8EE5;">struct</span> <span style="color: #7392E5;">week</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">year</span><span style="color: #93a8c6;">[</span>5<span style="color: #93a8c6;">]</span>;         <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Annee de la semaine</span>
+  <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">numWeek</span><span style="color: #93a8c6;">[</span>3<span style="color: #93a8c6;">]</span>;      <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Jour de la semaine (01 a 53)</span>
+  <span style="color: #6E8EE5;">struct</span> <span style="color: #7392E5;">week</span> *<span style="color: #CBD4EA;">suiv</span>;    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Semaine suivante</span>
+  <span style="color: #7392E5;">listAction_t</span> <span style="color: #CBD4EA;">listAct</span>; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Actions de la semaine</span>
+<span style="color: #8c8c8c;">}</span> <span style="color: #7392E5;">week_t</span>;
+
+<span style="color: #b0c4de;">#define</span> <span style="color: #CBD4EA;">listWeek_t</span> week_t *
+</pre>
+</div>
+
+<p>
+Un choix à était fait dans action et semaine de séparer le jour de l'heure
+(pour action) et l'année du numéro de semaine (pour la semaine) pour des
+raisons de modularité et d'affichage. En effet même si cette séparation nous force
+dans certaines partis de notre code à dupliquer les comparaisons et
+l'alourdit donc. Elle nous semblait avantageuses du point de vue de la
+compréhension globale du code en plus d'être beaucoup plus simple à modifier
+si on voulait changer la façon dans nos attributs sont stockés.
+</p>
+
+<p>
+En ce qui concerne la façon dont est stocké les différents attributs, nous
+avons privilégié les caractères (char) au entier (int) pour des raison
+d'occupations. En effet 2 ou 3 caractères prennent moins de place qu'un
+entier, et ceux-ci suffisent largement.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org4087c5a" class="outline-3">
+<h3 id="org4087c5a"><span class="section-number-3">1.3.</span> Les fichiers de données</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Les seuls fichier de données nécessaires dans notre cas (entrée comme sortie)
+et celui décrit dans l'énoncé
+</p>
+
+<blockquote>
+<p>
+fichier texte où chaque ligne donne, sans séparateur :
+</p>
+
+<p>
+année, semaine, jour, heure (sans espace), libellé de l’action sur 10 caractères
+(complété avec des espace si besoin)
+</p>
+
+<p>
+Exemple de ligne : 202215108TPs de SDD
+</p>
+</blockquote>
+
+<p>
+En voici un exemple que l'on a utiliser pour tester notre programme:
+</p>
+
+<pre class="example" id="org30e596c">
+202215108TP DE SDD
+202315108prog_fonc
+201015108COUCOU
+202215108TP DE SDD
+200007504TP CSN
+200007510TP CSN2
+202315310prog_fonc2
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-org1010fed" class="outline-3">
+<h3 id="org1010fed"><span class="section-number-3">1.4.</span> Organisation du code source</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Le code source est divisé en 4 fichiers (+ quelques fichiers headers pour
+connecter le tout). Les commentaires expliquant les fonctions se trouvent dans
+les headers pour des raisons de lisibilité. 
+</p>
+</div>
+
+<div id="outline-container-org75aa037" class="outline-4">
+<h4 id="org75aa037"><span class="section-number-4">1.4.1.</span> Action.c</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+Ce fichier contient la déclaration de la structure action (défini plus tôt)
+ainsi que toutes les fonctions se rapportant à celle-ci, On a notamment les
+fonctions permettant d'allouer de libérer une action, de la chercher,insérer
+ou supprimer d'une liste, de la comparer avec une autre et enfin d'afficher
+une liste d'action de façon propre.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org00f1b9e" class="outline-4">
+<h4 id="org00f1b9e"><span class="section-number-4">1.4.2.</span> semaine.c</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<p>
+Ce fichier contient la déclaration de la structure semaine (défini plus tôt)
+ainsi que toutes les fonctions se rapportant à celle-ci. On a exactement les
+mêmes fonctions que celle vu précédemment pour les actions, même cette fois-ci
+pour les semaines, ainsi que quelques fonctions supplémentaires provenant du
+faites que les actions vont partie intégrante des semaines. On a donc en plus
+des fonctions pour chercher, supprimer ou insérer des actions dans une liste
+de semaine.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgd0bc490" class="outline-4">
+<h4 id="orgd0bc490"><span class="section-number-4">1.4.3.</span> menu.c</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<p>
+Ce fichier contient Le menu afin de gérer de façon clair et simplifier la
+gestion de notre calendrier, c'est notamment dans ce fichier que tous ce qui
+concerne la lecture ou écriture du calendrier depuis un fichier et faite.
+Pour le compiler il suffit d'utiliser la commande make afin d'appeler le
+makefile (cf : makefile).
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org6b93782" class="outline-4">
+<h4 id="org6b93782"><span class="section-number-4">1.4.4.</span> test.c</h4>
+<div class="outline-text-4" id="text-1-4-4">
+<p>
+Ce fichier contiens tous les jeux de tests afin de vérifier que nos
+différentes fonctions produisent bien le résultat escompté. Pour le compiler
+il suffit d'appeler le makefile avec comme argument test (cf : makefile) 
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org37ef291" class="outline-2">
+<h2 id="org37ef291"><span class="section-number-2">2.</span> Fonctions</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Afin d'avoir une explication générale des fonction, de leurs paramètres et de
+leur sortie, un bloc de commentaire est déjà présent dans chaque headers. Cette
+section s'intéresse plus au corps des fonctions et explique l'algorithme ainsi
+que les différentes notations de celle-ci.
+</p>
+</div>
+
+<div id="outline-container-org5e1b509" class="outline-3">
+<h3 id="org5e1b509"><span class="section-number-3">2.1.</span> Fonctions actions</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org5853d31" class="outline-4">
+<h4 id="org5853d31"><span class="section-number-4">2.1.1.</span> Sous procédures</h4>
+<div class="outline-text-4" id="text-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgb6b0439"></a>checkDay<br />
+<div class="outline-text-5" id="text-2-1-1-1">
+<p>
+CheckDay est une fonction présente pour simplifier la vérification et
+rendre plus lisible les conditions dans les autres fonctions. Elle vérifie
+seulement si le jour donné en argument <b>day</b> et cohérent.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #7392E5;">int</span> <span style="color: #E9D2AF;">checkDay</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">day</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span> <span style="color: #6E8EE5;">return</span> <span style="color: #93a8c6;">(</span>day &gt; <span style="color: #C27127;">'0'</span> &amp;&amp; day &lt; <span style="color: #C27127;">'7'</span><span style="color: #93a8c6;">)</span>; <span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="orgcf137c1"></a>checkHour<br />
+<div class="outline-text-5" id="text-2-1-1-2">
+<p>
+CheckHour est exactement la même fonction que checkDay mais pour les heures
+</p>
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">int</span> <span style="color: #E9D2AF;">checkHour</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">hour</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #6E8EE5;">return</span> strcmp<span style="color: #93a8c6;">(</span>hour, <span style="color: #C27127;">"00"</span><span style="color: #93a8c6;">)</span> &gt;= 0 &amp;&amp; strcmp<span style="color: #93a8c6;">(</span>hour, <span style="color: #C27127;">"24"</span><span style="color: #93a8c6;">)</span> &lt;= 0;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org129608a"></a>compareAction<br />
+<div class="outline-text-5" id="text-2-1-1-3">
+<p>
+Compare action va comme indiquer dans le bloc de commentaire renvoyer 1 si
+l'action donné en argument <b>act</b> viens avant où est égal chronologiquement avec la date
+de référence <b>day</b> et <b>hour</b>.
+</p>
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">int</span> <span style="color: #E9D2AF;">compareAction</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">action_t</span> *<span style="color: #CBD4EA;">act</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">day</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">hour</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #6E8EE5;">return</span> act-&gt;day &lt; day || <span style="color: #93a8c6;">(</span>act-&gt;day == day &amp;&amp; strcmp<span style="color: #b0b1a3;">(</span>act-&gt;hour, hour<span style="color: #b0b1a3;">)</span> &lt; 0<span style="color: #93a8c6;">)</span>;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org4c66874"></a>equalAction<br />
+<div class="outline-text-5" id="text-2-1-1-4">
+<p>
+EqualAction se comporte comme compareAction, mais cette fois ci elle
+renvoie vrai seulement si <b>act</b> est égale à <b>day</b> et <b>hour</b>
+</p>
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">int</span> <span style="color: #E9D2AF;">equalAction</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">action_t</span> *<span style="color: #CBD4EA;">a</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">day</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">hour</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #6E8EE5;">return</span> a-&gt;day == day &amp;&amp; strcmp<span style="color: #93a8c6;">(</span>a-&gt;hour, hour<span style="color: #93a8c6;">)</span> == 0;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+
+
+
+<div id="outline-container-org750b61e" class="outline-4">
+<h4 id="org750b61e"><span class="section-number-4">2.1.2.</span> Procédures</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orged109df"></a>initListAction<br />
+<div class="outline-text-5" id="text-2-1-2-1">
+<p>
+initListAction renvoie seulement NULL, on effet vu que notre liste est une
+tête réelle, si notre liste est vide, on à donc notre tête qui pointe sur
+rien.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #7392E5;">listAction_t</span> <span style="color: #E9D2AF;">initListAction</span><span style="color: #8c8c8c;">()</span> <span style="color: #8c8c8c;">{</span> <span style="color: #6E8EE5;">return</span> <span style="color: #5971B2;">NULL</span>; <span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+<p>
+&gt;
+</p>
+</div>
+</li>
+
+
+<li><a id="org9e51535"></a>newAction<br />
+<div class="outline-text-5" id="text-2-1-2-2">
+<p>
+Le but de newAction est de créer une action à partir des informations
+nécessaires
+(<b>day</b>, <b>hour</b> et <b>name</b>)
+Dans un premier temps on va regarder si les informations fournit sont
+cohérentes, en effet si elle ne le sont pas rien ne sert de continuer et en
+renvoie dans ce cas NULL (et un message pour préciser à l'utilisateur le
+problème).
+Cette fonction va ensuite allouer l'espace mémoire nécessaire pour une
+action si les informations sont cohérentes. Si on à une erreur lors de
+l'allocation on envoie un message d'erreur à l'utilisateur et on arrête le
+processus (si il y a une erreur pour une allocation, il y a de grande
+chance qu'un plus gros problème est en train de se produire).
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">action_t</span> *<span style="color: #E9D2AF;">newAction</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">day</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">hour</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">name</span><span style="color: #93a8c6;">[</span>10<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #7392E5;">action_t</span> *<span style="color: #CBD4EA;">nouv</span> = <span style="color: #5971B2;">NULL</span>;
+
+  <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Si tout est correcte, on alloue l'espace m&#233;moire n&#233;cessaire</span>
+  <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Sinon on renvoie NULL;</span>
+  <span style="color: #6E8EE5;">if</span> <span style="color: #93a8c6;">(</span>checkHour<span style="color: #b0b1a3;">(</span>hour<span style="color: #b0b1a3;">)</span> &amp;&amp; checkDay<span style="color: #b0b1a3;">(</span>day<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #6E8EE5;">if</span> <span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span>nouv = <span style="color: #aebed8;">(</span><span style="color: #7392E5;">action_t</span> *<span style="color: #aebed8;">)</span>malloc<span style="color: #aebed8;">(</span><span style="color: #6E8EE5;">sizeof</span><span style="color: #b0b0b3;">(</span>action_t<span style="color: #b0b0b3;">)</span><span style="color: #aebed8;">)</span><span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">{</span>
+      nouv-&gt;day = day;
+      strcpy<span style="color: #97b098;">(</span>nouv-&gt;hour, hour<span style="color: #97b098;">)</span>;
+      strncpy<span style="color: #97b098;">(</span>nouv-&gt;name, name, 10<span style="color: #97b098;">)</span>;
+      nouv-&gt;suiv = <span style="color: #5971B2;">NULL</span>;
+    <span style="color: #b0b1a3;">}</span> <span style="color: #6E8EE5;">else</span> <span style="color: #b0b1a3;">{</span>
+      printf<span style="color: #97b098;">(</span><span style="color: #C27127;">"ERROR ALLOC DOESN'T WORK"</span><span style="color: #97b098;">)</span>;
+      exit<span style="color: #97b098;">(</span>-1<span style="color: #97b098;">)</span>;
+    <span style="color: #b0b1a3;">}</span>
+  <span style="color: #93a8c6;">}</span> <span style="color: #6E8EE5;">else</span> <span style="color: #93a8c6;">{</span>
+    printf<span style="color: #b0b1a3;">(</span><span style="color: #C27127;">"INVALID HOUR OR DAY\n"</span><span style="color: #b0b1a3;">)</span>;
+  <span style="color: #93a8c6;">}</span>
+  <span style="color: #6E8EE5;">return</span> nouv;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org72a1691"></a>freeAction<br />
+<div class="outline-text-5" id="text-2-1-2-3">
+<p>
+Dans le cas d'une simple action, il suffit juste de free cette dernière
+(cette fonction est surtout là car c'est une fonction que l'on doit créer
+pour de nombreux SDD).
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #7392E5;">void</span> <span style="color: #E9D2AF;">freeAction</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">action_t</span> *<span style="color: #CBD4EA;">act</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span> free<span style="color: #93a8c6;">(</span>act<span style="color: #93a8c6;">)</span>; <span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="orga023be0"></a>freeListAction<br />
+<div class="outline-text-5" id="text-2-1-2-4">
+<p>
+Cette fonction va libérer une liste d'action (en O(n), n étant la taille
+de la liste)
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">void</span> <span style="color: #E9D2AF;">freeListAction</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">listAction_t</span> <span style="color: #CBD4EA;">listAct</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #7392E5;">action_t</span> *<span style="color: #CBD4EA;">curr</span> = listAct; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Un pointeur vers notre action actuelle</span>
+  <span style="color: #7392E5;">action_t</span> *<span style="color: #CBD4EA;">tmp</span>;            <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Action temporaire (celle qu'on va supprimer)</span>
+
+  <span style="color: #656C7D;">// </span><span style="color: #656C7D;">On supprime la t&#234;te de liste et on avance jusqu'&#224; arriver &#224; la fin</span>
+  <span style="color: #6E8EE5;">while</span> <span style="color: #93a8c6;">(</span>curr<span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    tmp = curr;
+    curr = curr-&gt;suiv;
+    freeAction<span style="color: #b0b1a3;">(</span>tmp<span style="color: #b0b1a3;">)</span>;
+  <span style="color: #93a8c6;">}</span>
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="orgc0d3c9c"></a>findAction<br />
+<div class="outline-text-5" id="text-2-1-2-5">
+<p>
+Cette fonction va chercher dans une liste chaînée rangée la cellule
+correspondante et ceux et ce servant de l'algorithme vu en SDD. Elle
+retournera un pointeur qui pointe vers un pointeur d'action. Ce dernier
+contient l'action précédent celle recherché si elle existe dans la liste,
+sinon elle renverra le précédent de l'action la plus petite tel qu'elle
+soit plus grande que l'action recherchée. Dans le cas où les informations
+fournis sont incohérentes. On ne prends même pas la peine de chercher et on
+renvoie directement NULL.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c">   <span style="color: #7392E5;">action_t</span> **<span style="color: #E9D2AF;">findAction</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">listAction_t</span> *<span style="color: #CBD4EA;">listAct</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">hour</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">day</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #7392E5;">action_t</span> **<span style="color: #CBD4EA;">prec</span> =
+      <span style="color: #5971B2;">NULL</span>; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Pointeur d'un pointeur contenant l'action pr&#233;c&#233;dente</span>
+  <span style="color: #6E8EE5;">if</span> <span style="color: #93a8c6;">(</span>checkHour<span style="color: #b0b1a3;">(</span>hour<span style="color: #b0b1a3;">)</span> &amp;&amp; checkDay<span style="color: #b0b1a3;">(</span>day<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    prec = listAct;
+    <span style="color: #7392E5;">action_t</span> *<span style="color: #CBD4EA;">curr</span> = *listAct; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Un pointeur vers notre action actuelle</span>
+
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Tant qu'on n'as pas trouv&#233; l'action voulue et qu'on est avant</span>
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">chronologiquement</span>
+    <span style="color: #6E8EE5;">while</span> <span style="color: #b0b1a3;">(</span>curr &amp;&amp; compareAction<span style="color: #97b098;">(</span>curr, day, hour<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">{</span>
+      prec = &amp;<span style="color: #97b098;">(</span>curr-&gt;suiv<span style="color: #97b098;">)</span>;
+      curr = curr-&gt;suiv;
+    <span style="color: #b0b1a3;">}</span>
+  <span style="color: #93a8c6;">}</span>
+  <span style="color: #6E8EE5;">return</span> prec;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org3c9d0d0"></a>insertAction<br />
+<div class="outline-text-5" id="text-2-1-2-6">
+<p>
+Cette fonction va insérer dans une liste d'action une action si celle-ci
+est cohérente et si il n'existe pas déjà dans la liste une action avec le
+même jour et la même heure.
+Cette dernière suit la même logique que l'algorithme vu en SDD et ce sert
+de la fonction findAction décrite précédemment.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">void</span> <span style="color: #E9D2AF;">insertAction</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">listAction_t</span> *<span style="color: #CBD4EA;">listAct</span>, <span style="color: #7392E5;">action_t</span> *<span style="color: #CBD4EA;">nouvAction</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+
+  <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Si notre nouvAction n'est pas correcte, pas besoin de l'ajouter</span>
+  <span style="color: #6E8EE5;">if</span> <span style="color: #93a8c6;">(</span>nouvAction != <span style="color: #5971B2;">NULL</span><span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Pointeur de pointeur d'action qui pointe vers l'action pr&#233;c&#233;dent celle</span>
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">voulue si elle existe sinon voir fonction findAction</span>
+    <span style="color: #7392E5;">action_t</span> **<span style="color: #CBD4EA;">prec</span> = findAction<span style="color: #b0b1a3;">(</span>listAct, nouvAction-&gt;hour, nouvAction-&gt;day<span style="color: #b0b1a3;">)</span>;
+
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Si une action existe d&#233;j&#224; avec ce jour et heure</span>
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">On ne l'ajoute pas, et on le lib&#232;re de la m&#233;moire</span>
+    <span style="color: #6E8EE5;">if</span> <span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span>*prec<span style="color: #97b098;">)</span> != <span style="color: #5971B2;">NULL</span> &amp;&amp;
+        equalAction<span style="color: #97b098;">(</span>*prec, nouvAction-&gt;day, nouvAction-&gt;hour<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">{</span>
+      printf<span style="color: #97b098;">(</span><span style="color: #C27127;">"WE ALREADY HAVE AN ACTION AT THIS HOUR AND DAY OF THE WEEK\n"</span><span style="color: #97b098;">)</span>;
+      freeAction<span style="color: #97b098;">(</span>nouvAction<span style="color: #97b098;">)</span>;
+
+    <span style="color: #b0b1a3;">}</span>
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Sinon on l'ajoute dans notre liste</span>
+    <span style="color: #6E8EE5;">else</span> <span style="color: #b0b1a3;">{</span>
+      nouvAction-&gt;suiv = <span style="color: #97b098;">(</span>*prec<span style="color: #97b098;">)</span>;
+      *prec = nouvAction;
+    <span style="color: #b0b1a3;">}</span>
+  <span style="color: #93a8c6;">}</span>
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org5a9afdd"></a>supprAction<br />
+<div class="outline-text-5" id="text-2-1-2-7">
+<p>
+cette fonction va supprimer une action fournie en argument dans une liste
+d'action
+(si elle est dedans, sinon ne fais rien)
+On vérifie toujours que ce que l'on veut supprimer est cohérent, sinon on à
+même pas besoin de chercher.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">void</span> <span style="color: #E9D2AF;">supprAction</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">listAction_t</span> *<span style="color: #CBD4EA;">listAct</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">hour</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">day</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+
+  <span style="color: #6E8EE5;">if</span> <span style="color: #93a8c6;">(</span>checkHour<span style="color: #b0b1a3;">(</span>hour<span style="color: #b0b1a3;">)</span> &amp;&amp; checkDay<span style="color: #b0b1a3;">(</span>day<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #7392E5;">action_t</span> **<span style="color: #CBD4EA;">pprec</span> =
+        findAction<span style="color: #b0b1a3;">(</span>listAct, hour, day<span style="color: #b0b1a3;">)</span>; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Comme dans insertAction</span>
+
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Si on a bien cette action dans note liste</span>
+    <span style="color: #6E8EE5;">if</span> <span style="color: #b0b1a3;">(</span>pprec != <span style="color: #5971B2;">NULL</span> &amp;&amp; *pprec != <span style="color: #5971B2;">NULL</span> &amp;&amp; equalAction<span style="color: #97b098;">(</span>*pprec, day, hour<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">{</span>
+
+      <span style="color: #7392E5;">action_t</span> *<span style="color: #CBD4EA;">tmp</span> = *pprec; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Action temporaire</span>
+      <span style="color: #97b098;">(</span>*pprec<span style="color: #97b098;">)</span> = <span style="color: #97b098;">(</span>*pprec<span style="color: #97b098;">)</span>-&gt;suiv;
+      freeAction<span style="color: #97b098;">(</span>tmp<span style="color: #97b098;">)</span>;
+    <span style="color: #b0b1a3;">}</span>
+  <span style="color: #93a8c6;">}</span>
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org0370056"></a>prettyPrintListAction<br />
+<div class="outline-text-5" id="text-2-1-2-8">
+<p>
+Une fonction afin de visualiser plus joliment le contenue de notre
+liste.
+On aurait aussi pu faire un prettyPrintAction et ensuite appeler cette
+fonction pour toutes les action de la Liste, cependant cette fonction ne
+nous aurait pas plus servi que ça.
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org3b09a5f" class="outline-3">
+<h3 id="org3b09a5f"><span class="section-number-3">2.2.</span> Fonctions semaines</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+La plupart des fonctions propres au semaine suivent les mêmes algorithmes que
+ceux vu précédemment avec les actions, il y a juste un changement, <b>day</b>
+et <b>hour</b> deviennent <b>numWeek</b> et <b>year</b>. C'est pour ça que l'on ne va pas
+les décrire entièrement. Seul insertActionInsideWeek et supprActionInsideWeek
+sont différents de ce que l'on à vu dans action.
+</p>
+</div>
+
+<div id="outline-container-orgb602ebb" class="outline-4">
+<h4 id="orgb602ebb"><span class="section-number-4">2.2.1.</span> Sous procédures</h4>
+<div class="outline-text-4" id="text-2-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgf04afe1"></a>checkYear (similaire à checkHour)<br />
+<div class="outline-text-5" id="text-2-2-1-1">
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">int</span> <span style="color: #E9D2AF;">checkYear</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">year</span><span style="color: #93a8c6;">[</span>4<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #6E8EE5;">return</span> strcmp<span style="color: #93a8c6;">(</span>year, <span style="color: #C27127;">"0000"</span><span style="color: #93a8c6;">)</span> &gt;= 0 &amp;&amp; strcmp<span style="color: #93a8c6;">(</span>year, <span style="color: #C27127;">"9999"</span><span style="color: #93a8c6;">)</span> &lt;= 0;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org0fe7bc9"></a>checkNumWeek (similaire à checkHour)<br />
+<div class="outline-text-5" id="text-2-2-1-2">
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">int</span> <span style="color: #E9D2AF;">checkNumWeek</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">numWeek</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #6E8EE5;">return</span> strcmp<span style="color: #93a8c6;">(</span>numWeek, <span style="color: #C27127;">"00"</span><span style="color: #93a8c6;">)</span> &gt;= 0 &amp;&amp; strcmp<span style="color: #93a8c6;">(</span>numWeek, <span style="color: #C27127;">"52"</span><span style="color: #93a8c6;">)</span> &lt;= 0;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="orgd01cbd5"></a>compareWeek (similaire à compareAction)<br />
+<div class="outline-text-5" id="text-2-2-1-3">
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">int</span> <span style="color: #E9D2AF;">compareWeek</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">week_t</span> *<span style="color: #CBD4EA;">week</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">year</span><span style="color: #93a8c6;">[</span>4<span style="color: #93a8c6;">]</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">numWeek</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #6E8EE5;">return</span> strcmp<span style="color: #93a8c6;">(</span>week-&gt;year, year<span style="color: #93a8c6;">)</span> &lt; 0 || <span style="color: #93a8c6;">(</span>strcmp<span style="color: #b0b1a3;">(</span>week-&gt;year, year<span style="color: #b0b1a3;">)</span> == 0 &amp;&amp;
+                                          <span style="color: #b0b1a3;">(</span>strcmp<span style="color: #97b098;">(</span>week-&gt;numWeek, numWeek<span style="color: #97b098;">)</span> &lt; 0<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span>;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org1023e22"></a>equalWeek (similaire à equalWeek)<br />
+<div class="outline-text-5" id="text-2-2-1-4">
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">int</span> <span style="color: #E9D2AF;">equalWeek</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">week_t</span> *<span style="color: #CBD4EA;">week</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">year</span><span style="color: #93a8c6;">[</span>4<span style="color: #93a8c6;">]</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">numWeek</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #6E8EE5;">return</span> strcmp<span style="color: #93a8c6;">(</span>week-&gt;year, year<span style="color: #93a8c6;">)</span> == 0 &amp;&amp; strcmp<span style="color: #93a8c6;">(</span>week-&gt;numWeek, numWeek<span style="color: #93a8c6;">)</span> == 0;
+<span style="color: #8c8c8c;">}</span>
+
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+
+<div id="outline-container-org350c06a" class="outline-4">
+<h4 id="org350c06a"><span class="section-number-4">2.2.2.</span> Procedures</h4>
+<div class="outline-text-4" id="text-2-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org047f491"></a>initListWeek(similaire à initListAction)<br />
+<div class="outline-text-5" id="text-2-2-2-1">
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #7392E5;">listWeek_t</span> <span style="color: #E9D2AF;">initListWeek</span><span style="color: #8c8c8c;">()</span> <span style="color: #8c8c8c;">{</span> <span style="color: #6E8EE5;">return</span> <span style="color: #5971B2;">NULL</span>; <span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org6cfed67"></a>newWeek (similaire à newAction)<br />
+<div class="outline-text-5" id="text-2-2-2-2">
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">week_t</span> *<span style="color: #E9D2AF;">newWeek</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">year</span><span style="color: #93a8c6;">[</span>4<span style="color: #93a8c6;">]</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">numWeek</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #7392E5;">week_t</span> *<span style="color: #CBD4EA;">nouv</span> = <span style="color: #5971B2;">NULL</span>; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">La nouvelle semaine allou&#233; (null si incorrect)</span>
+
+  <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Si nos arguments sont coh&#233;rents</span>
+  <span style="color: #6E8EE5;">if</span> <span style="color: #93a8c6;">(</span>checkYear<span style="color: #b0b1a3;">(</span>year<span style="color: #b0b1a3;">)</span> &amp;&amp; checkNumWeek<span style="color: #b0b1a3;">(</span>numWeek<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Si l'allocation c'est bien pass&#233;</span>
+    <span style="color: #6E8EE5;">if</span> <span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span>nouv = <span style="color: #aebed8;">(</span><span style="color: #7392E5;">week_t</span> *<span style="color: #aebed8;">)</span>malloc<span style="color: #aebed8;">(</span><span style="color: #6E8EE5;">sizeof</span><span style="color: #b0b0b3;">(</span>week_t<span style="color: #b0b0b3;">)</span><span style="color: #aebed8;">)</span><span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">{</span>
+      strcpy<span style="color: #97b098;">(</span>nouv-&gt;year, year<span style="color: #97b098;">)</span>;
+      strcpy<span style="color: #97b098;">(</span>nouv-&gt;numWeek, numWeek<span style="color: #97b098;">)</span>;
+      nouv-&gt;suiv = <span style="color: #5971B2;">NULL</span>;
+      nouv-&gt;listAct = initListAction<span style="color: #97b098;">()</span>;
+    <span style="color: #b0b1a3;">}</span> <span style="color: #6E8EE5;">else</span> <span style="color: #b0b1a3;">{</span>
+      printf<span style="color: #97b098;">(</span><span style="color: #C27127;">"ERROR ALLOC DOESN'T WORK"</span><span style="color: #97b098;">)</span>;
+      exit<span style="color: #97b098;">(</span>-1<span style="color: #97b098;">)</span>;
+    <span style="color: #b0b1a3;">}</span>
+  <span style="color: #93a8c6;">}</span> <span style="color: #6E8EE5;">else</span> <span style="color: #93a8c6;">{</span>
+    printf<span style="color: #b0b1a3;">(</span><span style="color: #C27127;">"INVALID YEAR OR WEEK\n"</span><span style="color: #b0b1a3;">)</span>;
+  <span style="color: #93a8c6;">}</span>
+
+  <span style="color: #6E8EE5;">return</span> nouv;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org89b1f5c"></a>freeWeek<br />
+<div class="outline-text-5" id="text-2-2-2-3">
+<p>
+Il faut faire attention car dans freeWeek, on doit bien entendu libérer la
+place qu'on à utilisé pour la semaine mais avant cela bien penser à
+supprimer toute la place prise par notre liste d'action.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">void</span> <span style="color: #E9D2AF;">freeWeek</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">week_t</span> *<span style="color: #CBD4EA;">week</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  freeListAction<span style="color: #93a8c6;">(</span>week-&gt;listAct<span style="color: #93a8c6;">)</span>; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">On lib&#232;re en premier la liste d'action</span>
+  free<span style="color: #93a8c6;">(</span>week<span style="color: #93a8c6;">)</span>;                    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Puis la semaine en elle m&#234;me</span>
+<span style="color: #8c8c8c;">}</span>
+
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org0ba2b45"></a>freeListWeek (similaire à freeListAction)<br />
+<div class="outline-text-5" id="text-2-2-2-4">
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">void</span> <span style="color: #E9D2AF;">freeListWeek</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">listWeek_t</span> <span style="color: #CBD4EA;">week</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #7392E5;">week_t</span> *<span style="color: #CBD4EA;">curr</span> = week; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Un pointeur vers la semaine actuelle</span>
+  <span style="color: #7392E5;">week_t</span> *<span style="color: #CBD4EA;">tmp</span>;         <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Un pointeur de semaine temporaire</span>
+  <span style="color: #6E8EE5;">while</span> <span style="color: #93a8c6;">(</span>curr<span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    tmp = curr;
+    curr = curr-&gt;suiv;
+    freeWeek<span style="color: #b0b1a3;">(</span>tmp<span style="color: #b0b1a3;">)</span>;
+  <span style="color: #93a8c6;">}</span>
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org9ba5b63"></a>findWeek (similaire à findAction)<br />
+<div class="outline-text-5" id="text-2-2-2-5">
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">week_t</span> **<span style="color: #E9D2AF;">findWeek</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">listWeek_t</span> *<span style="color: #CBD4EA;">listWeek</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">year</span><span style="color: #93a8c6;">[</span>4<span style="color: #93a8c6;">]</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">numWeek</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #7392E5;">week_t</span> **<span style="color: #CBD4EA;">prec</span> = <span style="color: #5971B2;">NULL</span>; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Un pointeur de pointeur de semaine pointant vers la</span>
+                        <span style="color: #656C7D;">// </span><span style="color: #656C7D;">semaine pr&#233;c&#233;dent celle recherche si elle existe</span>
+                        <span style="color: #656C7D;">// </span><span style="color: #656C7D;">(sinon : voir bloc de commentaires dans le header)</span>
+
+  <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Si nos argument sont correctes</span>
+  <span style="color: #6E8EE5;">if</span> <span style="color: #93a8c6;">(</span>checkYear<span style="color: #b0b1a3;">(</span>year<span style="color: #b0b1a3;">)</span> &amp;&amp; checkNumWeek<span style="color: #b0b1a3;">(</span>numWeek<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #7392E5;">week_t</span> *<span style="color: #CBD4EA;">curr</span> = *listWeek; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">pointeur vers la semaine actuelle</span>
+    prec = listWeek;
+
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Tant qu'on &#224; pas trouv&#233; la bonne semaine ou une plus grande.</span>
+    <span style="color: #6E8EE5;">while</span> <span style="color: #b0b1a3;">(</span>curr &amp;&amp; compareWeek<span style="color: #97b098;">(</span>curr, year, numWeek<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">{</span>
+      prec = &amp;<span style="color: #97b098;">(</span>curr-&gt;suiv<span style="color: #97b098;">)</span>;
+      curr = curr-&gt;suiv;
+    <span style="color: #b0b1a3;">}</span>
+  <span style="color: #93a8c6;">}</span>
+  <span style="color: #6E8EE5;">return</span> prec;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="orgea3e11a"></a>insertWeek (similaire à insertAction)<br />
+<div class="outline-text-5" id="text-2-2-2-6">
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">week_t</span> **<span style="color: #E9D2AF;">insertWeek</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">listWeek_t</span> *<span style="color: #CBD4EA;">listWeek</span>, <span style="color: #7392E5;">week_t</span> *<span style="color: #CBD4EA;">nouvWeek</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #7392E5;">week_t</span> **<span style="color: #CBD4EA;">prec</span>; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Comme dans findWeek</span>
+
+  <span style="color: #6E8EE5;">if</span> <span style="color: #93a8c6;">(</span>nouvWeek != <span style="color: #5971B2;">NULL</span><span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    prec = findWeek<span style="color: #b0b1a3;">(</span>listWeek, nouvWeek-&gt;year, nouvWeek-&gt;numWeek<span style="color: #b0b1a3;">)</span>;
+
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Si il existe d&#233;j&#224; une liste dans ce cr&#233;neau.</span>
+    <span style="color: #6E8EE5;">if</span> <span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span>*prec<span style="color: #97b098;">)</span> != <span style="color: #5971B2;">NULL</span> &amp;&amp;
+        equalWeek<span style="color: #97b098;">(</span><span style="color: #aebed8;">(</span>*prec<span style="color: #aebed8;">)</span>, nouvWeek-&gt;year, nouvWeek-&gt;numWeek<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">{</span>
+
+      printf<span style="color: #97b098;">(</span><span style="color: #C27127;">"THIS WEEK ALREADY EXIST, NO NEED TO ADD IT\n"</span><span style="color: #97b098;">)</span>;
+
+      <span style="color: #656C7D;">// </span><span style="color: #656C7D;">On lib&#232;re celle en trop.</span>
+      freeWeek<span style="color: #97b098;">(</span>nouvWeek<span style="color: #97b098;">)</span>;
+
+    <span style="color: #b0b1a3;">}</span>
+
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Sinon on l'ajoute</span>
+    <span style="color: #6E8EE5;">else</span> <span style="color: #b0b1a3;">{</span>
+      nouvWeek-&gt;suiv = <span style="color: #97b098;">(</span>*prec<span style="color: #97b098;">)</span>;
+      *prec = nouvWeek;
+    <span style="color: #b0b1a3;">}</span>
+  <span style="color: #93a8c6;">}</span>
+  <span style="color: #6E8EE5;">return</span> prec;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org8afef85"></a>supprWeek (similaire à supprAction)<br />
+<div class="outline-text-5" id="text-2-2-2-7">
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">void</span> <span style="color: #E9D2AF;">supprWeek</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">listWeek_t</span> *<span style="color: #CBD4EA;">listWeek</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">year</span><span style="color: #93a8c6;">[</span>4<span style="color: #93a8c6;">]</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">week</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #7392E5;">week_t</span> **<span style="color: #CBD4EA;">pprec</span> = findWeek<span style="color: #93a8c6;">(</span>listWeek, year, week<span style="color: #93a8c6;">)</span>; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Comme dans findWeek</span>
+
+  <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Si la semaine correspond bien &#224; celle voulue</span>
+  <span style="color: #6E8EE5;">if</span> <span style="color: #93a8c6;">(</span>pprec != <span style="color: #5971B2;">NULL</span> &amp;&amp; *pprec != <span style="color: #5971B2;">NULL</span> &amp;&amp; equalWeek<span style="color: #b0b1a3;">(</span>*pprec, year, week<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">On la supprime</span>
+    <span style="color: #7392E5;">week_t</span> *<span style="color: #CBD4EA;">tmp</span> = *pprec; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">pointeur de semaine temporaire</span>
+    <span style="color: #b0b1a3;">(</span>*pprec<span style="color: #b0b1a3;">)</span> = <span style="color: #b0b1a3;">(</span>*pprec<span style="color: #b0b1a3;">)</span>-&gt;suiv;
+    freeWeek<span style="color: #b0b1a3;">(</span>tmp<span style="color: #b0b1a3;">)</span>;
+  <span style="color: #93a8c6;">}</span>
+<span style="color: #8c8c8c;">}</span>
+
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org772f192"></a>suprActionInsideWeek<br />
+<div class="outline-text-5" id="text-2-2-2-8">
+<p>
+Cette fonction ainsi que la suivante sont un peu plus propre au semaine. En
+effet si on veut modifier seulement une action dans notre liste de semaine
+(ce qui est le cas pour notre calendrier) il nous faut parcourir/modifier
+aussi bien les semaines que les actions.
+C'est dans ces fonctions que tout les procédures qu'on à vu avant prennent
+leur sens. Grâce à ces dernières nos deux fonction principaux pour le
+calendrier deviennent très simple à écrire.
+</p>
+
+<p>
+On réalise un premier parcours de la liste des Semaines pour voir si il
+existe une semaine avec l'année et le numéro de semaine donné en
+argument. Si c'est le cas on parcours la liste d'action de cette semaine
+pour trouver l'action concordant avec nos arguments <b>day</b> et <b>hour</b>. Si
+cette action existe alors il nous suffit de la supprimer. Si l'une de ces
+deux recherches ne concluent pas. Cela veux dire qu'il n'existe pas dans la
+liste l'action à supprimer. On peut donc arrêter là. Enfin en vérifie au
+début de la procédure si nos argument sont correctes, dans le cas inverse
+on peut éviter de chercher car on sait de base qu'il n'y aura rien à
+supprimer.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">int</span> <span style="color: #E9D2AF;">supprActionInsideWeek</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">listWeek_t</span> *<span style="color: #CBD4EA;">listWeek</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">year</span><span style="color: #93a8c6;">[</span>4<span style="color: #93a8c6;">]</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">week</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span>,
+                          <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">day</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">hour</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #656C7D;">// </span><span style="color: #656C7D;">On cherche la semaine de l'action &#224; supprimer</span>
+  <span style="color: #7392E5;">int</span> <span style="color: #CBD4EA;">code</span> = 1;
+  <span style="color: #7392E5;">week_t</span> **<span style="color: #CBD4EA;">precWeek</span> = findWeek<span style="color: #93a8c6;">(</span>listWeek, year, week<span style="color: #93a8c6;">)</span>;
+
+  <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Si elle existe</span>
+  <span style="color: #6E8EE5;">if</span> <span style="color: #93a8c6;">(</span>*precWeek != <span style="color: #5971B2;">NULL</span> &amp;&amp; equalWeek<span style="color: #b0b1a3;">(</span>*precWeek, year, week<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">On cherche l'action dans cette semaine</span>
+    <span style="color: #7392E5;">action_t</span> **<span style="color: #CBD4EA;">curr</span> =
+        findAction<span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span>&amp;<span style="color: #aebed8;">(</span>*findWeek<span style="color: #b0b0b3;">(</span>listWeek, year, week<span style="color: #b0b0b3;">)</span><span style="color: #aebed8;">)</span>-&gt;listAct<span style="color: #97b098;">)</span>, hour, day<span style="color: #b0b1a3;">)</span>;
+
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Si elle existe on la supprime</span>
+    <span style="color: #6E8EE5;">if</span> <span style="color: #b0b1a3;">(</span>curr != <span style="color: #5971B2;">NULL</span> &amp;&amp; equalAction<span style="color: #97b098;">(</span>*curr, day, hour<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">{</span>
+      supprAction<span style="color: #97b098;">(</span>curr, hour, day<span style="color: #97b098;">)</span>;
+      <span style="color: #6E8EE5;">if</span> <span style="color: #97b098;">(</span><span style="color: #aebed8;">(</span>*precWeek<span style="color: #aebed8;">)</span>-&gt;listAct == <span style="color: #5971B2;">NULL</span><span style="color: #97b098;">)</span> <span style="color: #97b098;">{</span>
+        supprWeek<span style="color: #aebed8;">(</span>precWeek, year, week<span style="color: #aebed8;">)</span>;
+      <span style="color: #97b098;">}</span>
+    <span style="color: #b0b1a3;">}</span> <span style="color: #6E8EE5;">else</span>
+      code = -1;
+  <span style="color: #93a8c6;">}</span> <span style="color: #6E8EE5;">else</span>
+    code = -2;
+
+  <span style="color: #6E8EE5;">return</span> code;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="org348dc63"></a>insertActionInsideWeek<br />
+<div class="outline-text-5" id="text-2-2-2-9">
+<p>
+On va appeler dans un premier temps insereWeek qui va nous retourner la semaine
+correspondant au argument fourni. Ensuite on appelle sur la liste d'action de cette
+semaine la fonction insertAction. Les cas ou une action / semaine existe
+déjà sur c'est créneaux sont gérés par la fonction insert.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">void</span> <span style="color: #E9D2AF;">insertActionInsideWeek</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">listWeek_t</span> *<span style="color: #CBD4EA;">listWeek</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">year</span><span style="color: #93a8c6;">[</span>4<span style="color: #93a8c6;">]</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">numWeek</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span>,
+                            <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">day</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">hour</span><span style="color: #93a8c6;">[</span>2<span style="color: #93a8c6;">]</span>, <span style="color: #7392E5;">char</span> <span style="color: #CBD4EA;">name</span><span style="color: #93a8c6;">[</span>10<span style="color: #93a8c6;">]</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Si notre semaine et action sont coh&#233;rentes</span>
+  <span style="color: #6E8EE5;">if</span> <span style="color: #93a8c6;">(</span>checkNumWeek<span style="color: #b0b1a3;">(</span>numWeek<span style="color: #b0b1a3;">)</span> &amp;&amp; checkYear<span style="color: #b0b1a3;">(</span>year<span style="color: #b0b1a3;">)</span> &amp;&amp; checkDay<span style="color: #b0b1a3;">(</span>day<span style="color: #b0b1a3;">)</span> &amp;&amp;
+      checkHour<span style="color: #b0b1a3;">(</span>hour<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">On cherche/ins&#232;re si besoin la semaine</span>
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Pas besoin de v&#233;rifier si week NULL, en effet on l'a d&#233;j&#224; v&#233;rifi&#233; avec la</span>
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">condition au dessus</span>
+    <span style="color: #7392E5;">week_t</span> **<span style="color: #CBD4EA;">week</span> = insertWeek<span style="color: #b0b1a3;">(</span>listWeek, newWeek<span style="color: #97b098;">(</span>year, numWeek<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span>;
+    <span style="color: #656C7D;">// </span><span style="color: #656C7D;">On ins&#232;re l'action</span>
+    insertAction<span style="color: #b0b1a3;">(</span>&amp;<span style="color: #97b098;">(</span>*week<span style="color: #97b098;">)</span>-&gt;listAct, newAction<span style="color: #97b098;">(</span>day, hour, name<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span>;
+  <span style="color: #93a8c6;">}</span>
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+
+
+<li><a id="orgb1454bc"></a>prettyPrintListWeek (similaire à prettyPrintListAction)<br />
+<div class="outline-text-5" id="text-2-2-2-10">
+<div class="org-src-container">
+<pre class="src src-c">  <span style="color: #7392E5;">void</span> <span style="color: #E9D2AF;">prettyPrintListWeek</span><span style="color: #8c8c8c;">(</span><span style="color: #7392E5;">listWeek_t</span> <span style="color: #CBD4EA;">listWeek</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #7392E5;">week_t</span> *<span style="color: #CBD4EA;">curr</span> = listWeek; <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Pointeur sur la semaine courante</span>
+  <span style="color: #7392E5;">int</span> <span style="color: #CBD4EA;">i</span> = 0;               <span style="color: #656C7D;">// </span><span style="color: #656C7D;">Simple compteur</span>
+
+  printf<span style="color: #93a8c6;">(</span><span style="color: #C27127;">"==========================================================\n"</span><span style="color: #93a8c6;">)</span>;
+  <span style="color: #6E8EE5;">while</span> <span style="color: #93a8c6;">(</span>curr<span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    printf<span style="color: #b0b1a3;">(</span><span style="color: #C27127;">"| %d | week %s | year %s |\n"</span>, i, curr-&gt;numWeek, curr-&gt;year<span style="color: #b0b1a3;">)</span>;
+    <span style="color: #6E8EE5;">if</span> <span style="color: #b0b1a3;">(</span>curr-&gt;listAct<span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">{</span>
+      printf<span style="color: #97b098;">(</span><span style="color: #C27127;">"Action :::\n"</span><span style="color: #97b098;">)</span>;
+      prettyPrintListAction<span style="color: #97b098;">(</span>curr-&gt;listAct<span style="color: #97b098;">)</span>;
+      printf<span style="color: #97b098;">(</span><span style="color: #C27127;">"\n\n"</span><span style="color: #97b098;">)</span>;
+    <span style="color: #b0b1a3;">}</span>
+    i++;
+    curr = curr-&gt;suiv;
+  <span style="color: #93a8c6;">}</span>
+  printf<span style="color: #93a8c6;">(</span><span style="color: #C27127;">"==========================================================\n\n"</span><span style="color: #93a8c6;">)</span>;
+<span style="color: #8c8c8c;">}</span>
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org6613b4e" class="outline-2">
+<h2 id="org6613b4e"><span class="section-number-2">3.</span> Exécution</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org3d4ccbe" class="outline-3">
+<h3 id="org3d4ccbe"><span class="section-number-3">3.1.</span> Makefile</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Le makefile permet de compiler tous les fichiers nécessaires pour obtenir l'exécutable du
+menu en une seule commande. Il suffit pour cela d'appeler la commande make
+dans le répertoire contenant le fichier makefile.
+</p>
+
+<p>
+Pour obtenir l'exécutable
+de l'ensemble du jeu de test. Il suffit d'appeler de la même façon la
+commande make avec comme argument cette fois ci test.
+</p>
+
+<p>
+Toute les compilations se font avec l'option -g pour pouvoir utiliser valgrind.
+</p>
+
+<pre class="example">
+  CC = gcc
+CFLAGS = -Wall -Wextra
+LFLAGS = -g
+SOURCES = $(wildcard *.c)
+EXEC = prog
+
+all: $(EXEC)
+
+$(EXEC) : menu.o action.o semaine.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LFLAGS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -o $@ -c $&lt; $(LFLAGS)
+
+test: test.o action.o semaine.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LFLAGS)	
+clean: 
+	rm -rf *.o
+
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-org6923587" class="outline-3">
+<h3 id="org6923587"><span class="section-number-3">3.2.</span> Jeux de tests</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Comme indiqué précédemment, tous les jeux de tests se situent dans le fichier
+test.c, il suffit ensuite de compiler et exécuter le programme afin de
+vérifier les différents cas. On peut toujours mettre certains test en
+commentaires pour faciliter la lecture d'un cas spécifiques.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Cliquot Théo &amp; Marie Bornet</p>
+<p class="date">Created: 2022-06-20 lun. 10:18</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
